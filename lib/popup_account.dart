@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'main.dart';
-var addr='192.168.1.76:5000';
+
+var addr = '192.168.183.30:5000';
 var url = Uri.parse('http://$addr/key');
 var urlCtrl = Uri.parse('http://$addr/keyCtrl');
 var urlShiftAlt = Uri.parse('http://$addr/keyShiftAlt');
@@ -22,11 +23,9 @@ class PopUpAccount extends StatefulWidget {
 }
 
 class _PopUpAccountState extends State<PopUpAccount> {
-
   @override
   Widget build(BuildContext context) {
     final IPaddr = TextEditingController();
-
 
     return Padding(
       padding: const EdgeInsets.only(top: 40),
@@ -61,12 +60,10 @@ class _PopUpAccountState extends State<PopUpAccount> {
                       color: Colors.black,
                     ),
                   ),
-                  onSubmitted: (value) async {
+                  onSubmitted: (value) async {}),
 
-
-                  }),
               /// ////////////////////2nd///////////////////////////////////
-              
+
               /// //////////////////////////////////////////////////////////
               // ActionChip(
               //   avatar: Icon(isVertical ? Icons.check_box_outlined : Icons.check_box_outline_blank ),
@@ -86,7 +83,6 @@ class _PopUpAccountState extends State<PopUpAccount> {
               /////////////////////////end text 3//////////////////////////////
             ],
           ),
-
           actions: [
             Padding(
               padding: EdgeInsets.only(bottom: 20),
@@ -97,9 +93,9 @@ class _PopUpAccountState extends State<PopUpAccount> {
                     onPressed: () async {
                       url = Uri.parse('http://${IPaddr.text}/key');
                       urlCtrl = Uri.parse('http://${IPaddr.text}/keyCtrl');
-                      urlShiftAlt = Uri.parse('http://${IPaddr.text}/keyShiftAlt');
+                      urlShiftAlt =
+                          Uri.parse('http://${IPaddr.text}/keyShiftAlt');
                       Navigator.pop(context);
-
                     },
                     child: Text('Set'),
                     style: ButtonStyle(
